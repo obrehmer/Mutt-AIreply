@@ -69,7 +69,8 @@ macro index,pager S "| ~/.mutt/email_file <enter>"
 Macro for auto-reply with the AI-generated message:
 
 ```
-macro index,pager A "<enter-command>set editor=~/.mutt/aireply<enter><reply><edit-from><kill-line>Do Not Reply <noreply@domain.tld><enter><edit-subject><bol><delete-char><delete-char><delete-char><delete-char>Automatic Reply (was: <eol>)<enter><send-message>a<enter-command>set editor=vim<enter>" "Auto-reply + archive"
+macro index,pager A "<enter-command>set editor=~/.mutt/aireply<enter><reply><edit-from><enter><enter><enter>"  "Auto-reply + archive"
+
 ```
 
 
