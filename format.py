@@ -10,9 +10,9 @@ client = OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
 
 def extract_text_from_email(email_content):
     msg = email.message_from_string(email_content)
-    from_address = msg.get("To", "Unbekannter Empfänger")
-    to_address = msg.get("Reply-To") or msg.get("From", "Unbekannter Absender")
-    subject = msg.get("Subject", "Kein Betreff")
+    from_address = msg.get("To", "Unknown")
+    to_address = msg.get("Reply-To") or msg.get("From", "Unknown")
+    subject = msg.get("Subject", "No subject")
     subject = f"Re: {subject}"
     in_reply_to = msg.get("Message-ID", "")
 
